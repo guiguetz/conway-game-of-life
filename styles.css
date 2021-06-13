@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --green: #59981a;
+  --yellow-green: #ecf87f;
+  --lime-green: #81b622;
+  --olive-green: #3d550c;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--lime-green);
+}
+
+#container {
+  margin: 16px;
+}
+
+#container canvas {
+  border: 1px solid var(--olive-green);
+}

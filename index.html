@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Implementação do Jogo da Vida de John Conway, por Guilherme Aguiar." />
+	<title>Conway's Game of Life</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"
+		integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" async></script>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<section>
+		<h1>Conway's game of life</h1>
+		<h2>Regras:</h2>
+		<ul>
+			<li>Qualquer célula viva com menos de dois vizinhos vivos morre de solidão.</li>
+			<li>Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.</li>
+			<li>Qualquer célula morta com exatamente três vizinhos vivos se torna uma célula viva.</li>
+			<li>Qualquer célula viva com dois ou três vizinhos vivos continua no mesmo estado para a próxima geração.
+			</li>
+		</ul>
+		<button id="btn-start" type="button" onclick="start()">Avançar automaticamente</button>
+		<button id="btn-stop" disabled type="button" onclick="stop()">Parar</button>
+		<button id="btn-run-1" type="button" onclick="draw()">Avançar 1 gerações</button>
+		<button id="btn-run-5" type="button" onclick="run(5)">Avançar 5 gerações</button>
+		<button id="btn-run-10" type="button" onclick="run(10)">Avançar 10 gerações</button>
+		<button id="reset" type="button" onclick="reset()">Reiniciar</button>
+	</section>
+	<main id="container">
+		<p>Geração <span id="generation"></span></p>
+	</main>
+	<script src="sketch.js" async></script>
+</body>
+
+</html>
